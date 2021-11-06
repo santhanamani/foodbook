@@ -1,0 +1,148 @@
+
+<!-- 
+##################################################################
+Creator name :- SANTHANAMANI S
+CREATE DATE:-3/11/2021
+DESCRIPTION : Home page slider create for use this method call
+
+###################################################################
+ -->
+
+
+<section class="home" id="home" style="padding-bottom:20px">
+
+    <div class="swiper-container home-slider">
+  
+        <div class="swiper-wrapper wrapper">
+
+            <div id="slider" style="margin-left: 0%;width:100%;margin-right: 0%;">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <div id="slides">
+                   <div id="overflow">
+                      <div class="inner"> 
+                         <div class="slide slide_1" style="padding-top: 0px;">
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6">
+                                    <div class="content" style="text-align: left;padding-left: 50px;padding-top: 100px;">
+                                        <span>Our Special Dish</span>
+                                         <h3 style="font-size: 70px;padding-top: 20px;">Fried Chicken</h3>
+                                         <p style="font-size: 22px;">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sit Natus Dolor Cumque?</p>
+                                       
+                                        <div class="button-group" (click)="navigate('Chicken')">
+                                            <div >
+                                               <a  class="btn btn2" >Order Now</a>
+                                            </div>
+                                          
+                                      </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-6">
+                                    <div >
+                                        <img src="../../assets/images/home-img-2.png" style="width: 88%;height:88%;padding-top:1%;background-size:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="slide slide_2" style="padding-top: 0px;">
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6">
+                                    <div class="content" style="text-align: left;padding-left: 50px;padding-top: 100px;">
+                                        <span>Our Special Dish</span>
+                                         <h3 style="font-size: 70px;padding-top: 20px;">Spicy Noodles</h3>
+                                         <p style="font-size: 22px;">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sit Natus Dolor Cumque?</p>
+                                       
+                                        <div class="button-group">
+                                            <div style="text-align: left;">
+                                               <a  class="btn btn2">Order Now</a>
+                                            </div>
+                                          
+                                      </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-6">
+                                    <div >
+                                        <img src="../../assets/images/home-img-1.png" style="width: 87%;height:87%;background-size:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="slide slide_3" style="padding-top: 0px;">
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6">
+                                    <div class="content" style="text-align: left;padding-left: 50px;padding-top: 100px;">
+                                        <span>Our Special Dish</span>
+                                         <h3 style="font-size: 70px;padding-top: 20px;">Hot Pizza</h3>
+                                         <p style="font-size: 22px;">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sit Natus Dolor Cumque?</p>
+                                       
+                                        <div class="button-group" (click)="navigate('Pizza')">
+                                            <div style="text-align: left;">
+                                               <a  class="btn btn2">Order Now</a>
+                                            </div>
+                                          
+                                      </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-6">
+                                    <div >
+                                        <img src="../../assets/images/home-img-3.png" style="width: 88%;height:88%;padding-top:1%;background-size:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="slide slide_4" style="padding-top: 0px;">
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-6">
+                                    <div class="content" style="text-align: left;padding-left: 50px;padding-top: 100px;">
+                                        <span>Our Special Dish</span>
+                                         <h3 style="font-size: 70px;padding-top: 20px;">Veggie Burger</h3>
+                                         <p style="font-size: 22px;">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Sit Natus Dolor Cumque?</p>
+                                       
+                                        <div class="button-group" (click)="navigate('Tuscan Grilled')">
+                                            <div style="text-align: left;">
+                                               <a  class="btn btn2">Order Now</a>
+                                            </div>
+                                          
+                                      </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-6">
+                                    <div >
+                                        <img src="../../assets/images/pngegg.png" style="width: 95%;height:95%;padding-top:1%;margin-left:65px;background-size:cover;">
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div id="controls">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
+                </div>
+                <div id="bullets">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
+                </div>
+             </div>
+
+  
+
+  
+        </div>
+  
+        <div class="swiper-pagination"></div>
+  
+    </div>
+  
+  </section>

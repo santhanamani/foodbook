@@ -1,0 +1,53 @@
+<!-- 
+##################################################################
+Creator name :- SANTHANAMANI S
+CREATE DATE:-3/11/2021
+DESCRIPTION : Order details list view show method use for the this module
+
+###################################################################
+ -->
+
+<app-navbar></app-navbar>
+<section class="home" id="home" style="padding-bottom:20px">
+<div class="container">
+    
+<div class="row">
+    <div class="col-md-12 col-12">
+        <div style="text-align: center;">
+            <p style="padding-top:10px;font-weight: bold;font-size: 40px;font-family:Roboto-Regular;">ORDER DETAILS PAGE</p>
+        </div>
+    </div>
+    <div class="col-12">
+	<div class="row">
+	<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ></th>
+                <th>ITEM NAME</th>
+                <th>TYPE</th>
+                <th>CUISINE</th>
+                <th>PRICE</th>
+                <th>ORDER DATE</th>
+                <th>ORDER TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let group of data">
+                <td><input type="checkbox" name=""></td>
+                <td>{{group.ITEMNAME}}</td>
+                <td>{{group.TYPE}}</td>
+                <td>{{group.CUISINCE}}</td>
+                <td>{{group.PRICE}}</td>
+                <td>{{group.ORDER_DATE}}</td>
+                <td>{{group.ORDER_TIME}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+	</div>
+    </div>
+    </div>
+</div>
+</section>
+
+<app-footer></app-footer>

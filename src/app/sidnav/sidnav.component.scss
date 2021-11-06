@@ -1,0 +1,22 @@
+.brg:hover{
+    box-shadow: 2px 2px 15px #080706e5;
+    transform: scale(1.02);
+    
+}
+
+.clg:hover
+{
+    cursor: pointer;
+    color: rgb(190, 140, 2);
+}
+
+.btn {
+    display: block;
+    font-family: Roboto-Regular;
+    padding: 5px;
+    color: #1a73e8;
+    margin: 10px 0 0;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 2px
+}

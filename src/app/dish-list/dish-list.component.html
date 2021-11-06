@@ -1,0 +1,135 @@
+
+<div id="mySidenav" class="sidenav">
+    <section  style="padding: 10px 0;">
+      <div class="col-12">
+        <div class="row">
+              <div class="col-6" style=" padding-bottom: 10px;" align="left">
+                <button style="width: 60px;" class="btn btn-primary" (click)="Refresh()" >Refresh</button>
+            </div>
+            <div class="col-6" style=" padding-bottom: 10px;" align="right">
+              <button style="width: 60px;" class="btn btn-primary" (click)="closeNav()" >Close</button>
+            </div>
+        </div>
+      </div>
+      
+    
+    <div class="row" style="width: 100%;margin-left:2px">
+      <div class="col-12" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="card brg" style="width: 100%;">
+          <label style="font-family: Roboto-Regular;padding-left:10px;padding-right:10px">Price</label>
+          <div class="form-check" *ngFor="let group of price;let i = index" >
+            <div class="row" (click)="check(i)">
+              <div class="col-2" style="margin-top: 5px;">
+                <input class="form-check-input" style="width: 16px;height: 16px;" type="radio" name="exampleRadios" id="exampleRadios{{i}}" value="option1" >
+              </div>  
+              <div class="col-10" style="padding-left:0px">
+                <label class="form-check-label" for="exampleRadios{{i}}">
+                  {{group.price_name}}
+                </label>
+              </div>
+            </div>
+          
+          </div>
+
+        </div>
+      </div>
+
+
+  
+      <div class="col-12" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="card brg" style="width: 100%;" >
+          <label style="font-family: Roboto-Regular;padding-left:10px;padding-right:10px">Customer Review</label>
+          <div class="clg" style="font-size: 20px; padding-left: 20px;" (click)="check1(group.star_count)"  *ngFor="let group of star;let i = index">
+           
+            <span *ngFor="let in of counter(5) ;let i = index">
+            <i  *ngIf=" i+1 <= group.star_count && i!=5" class="bi bi-star-fill"></i>
+            <i  *ngIf=" (i > group.star_count || (4.5 == group.star_count && i+1==5)) && i!=5  && ( 1.5 == group.star_count || 2.5 == group.star_count || 3.5 == group.star_count || 4.5 == group.star_count || 5.5 == group.star_count )  " class="bi bi-star-half"></i>
+            <i  *ngIf=" i >= group.star_count && i!=5 " class="bi bi-star"></i>
+            </span> 
+            <span style="font-size: 20px;font-family: Roboto-Regular;padding-left: 2px;">& Up</span>
+          </div>
+        </div>
+  
+       
+      </div>
+
+
+      <div class="col-12" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="card brg" style="width: 100%;">
+          <label style="font-family: Roboto-Bold;padding-left:10px;padding-right:10px">Dish name</label>
+
+          <div class="form-check" *ngFor="let group of dishes;let i = index">
+            <div class="row">
+                <div class="col-2" style="margin-top: 5px;">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault{{i}}">
+                </div>  
+                <div class="col-10" style="padding-left:4px">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        {{group.dish_name}}
+                    </label>
+                </div>
+              </div>
+           
+          </div>
+          <div class="col-12" style="padding-bottom: 15px;">
+            <button class="btn">Apply</button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    </section>
+  
+    </div>
+
+<section class="home" id="home" style="padding-bottom:20px">
+<div class="col-md-12 col-12">
+    <div class="row">
+<div class="col-md-12 col-12">
+    <div style="text-align: center;">
+        <p style="padding-top:10px;font-weight: bold;font-size: 40px;font-family:Roboto-Regular;">{{details.dish_name}}</p>
+    </div>
+</div>
+<div class="col-md12 col-12">
+    <span style="font-size:20px;cursor:pointer;font-family:Roboto-Regular;" (click)="openNav()"><i style="background-color: #fc8019;border-radius: 60px;box-shadow: 0px 0px 2px rgb(241, 239, 239);padding: 0.2em 0.3em;color: white;" class="bi bi-filter"></i><a> Filters</a></span>
+</div>
+<div class="mani col-12 col-sm-6 col-lg-3 col-md-3" style="padding: 15px;" align="center" *ngFor="let group of dishes">
+    <div class="product">
+        <div class="imgbox"> <img src="../../assets/images/{{group.image}}"> </div>
+        <div class="specifies">
+            <div class="row">
+                <div class="col-8">
+                    <a style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #000;font-weight: bold;">{{ group.dish_name }} </a>
+                </div>
+                <div class="col-4">
+                    <div class="price">₹{{ group.amount }}</div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" (click)="order(group)">Order Now</button>
+                </div>
+                <div class="col-12">
+                    <div style="font-size: 1.7rem;text-align: center;" align="center">
+                        <span *ngFor="let in of counter(5) ;let i = index">
+                        <i  *ngIf=" i+1 <= group.star && i!=5" class="bi bi-star-fill"></i>
+                        <i  *ngIf=" (i > group.star || (4.5 == group.star && i+1==5)) && i!=5  && ( 1.5 == group.star || 2.5 == group.star || 3.5 == group.star || 4.5 == group.star || 5.5 == group.star )  " class="bi bi-star-half"></i>
+                        <i  *ngIf=" i >= group.star && i!=5 " class="bi bi-star"></i>
+                        </span> 
+                    </div>
+                </div>
+                <div class="col-12" style="height: 60px; padding-top: 3px;">
+                    <a >{{ group.dish_desc }}</a>
+                </div>
+            
+               
+            </div>
+
+      
+        </div>
+    </div>
+</div>  
+
+</div>
+</div>
+</section>
+

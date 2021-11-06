@@ -1,0 +1,65 @@
+
+
+<!-- 
+##################################################################
+Creator name :- SANTHANAMANI S
+CREATE DATE:-3/11/2021
+DESCRIPTION : Filter option sidnav function call use this method
+
+###################################################################
+ -->
+
+<div id="mySidenav" class="sidenav">
+  <section  style="padding: 60px 0;">
+  <div class="row" style="width: 100%;margin-left:2px">
+    <div class="col-12" style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="card brg" style="width: 100%;">
+        <label style="font-family: Roboto-Regular;padding-left:10px;padding-right:10px">Price</label>
+        <div class="form-check" *ngFor="let group of price;let i = index">
+          <div class="row">
+            <div class="col-2" style="margin-top: 5px;">
+              <input class="form-check-input" style="width: 16px;height: 16px;" type="radio" name="exampleRadios" id="exampleRadios{{i}}" value="option1" >
+            </div>  
+            <div class="col-10" style="padding-left:0px">
+              <label class="form-check-label" for="exampleRadios{{i}}">
+                {{group.price_name}}
+              </label>
+            </div>
+          </div>
+        
+        </div>
+
+
+        <div class="col-12" style="padding-bottom: 15px;">
+          <button class="btn">Apply</button>
+        </div>
+
+      </div>
+
+     
+    </div>
+
+    <div class="col-12" style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="card brg" style="width: 100%;" >
+        <label style="font-family: Roboto-Regular;padding-left:10px;padding-right:10px">Customer Review</label>
+        <div class="clg" style="font-size: 20px; padding-left: 20px;"  *ngFor="let group of star;let i = index">
+         
+          <span *ngFor="let in of counter(5) ;let i = index">
+          <i  *ngIf=" i+1 <= group.star_count && i!=5" class="bi bi-star-fill"></i>
+          <i  *ngIf=" (i > group.star_count || (4.5 == group.star_count && i+1==5)) && i!=5  && ( 1.5 == group.star_count || 2.5 == group.star_count || 3.5 == group.star_count || 4.5 == group.star_count || 5.5 == group.star_count )  " class="bi bi-star-half"></i>
+          <i  *ngIf=" i >= group.star_count && i!=5 " class="bi bi-star"></i>
+          </span> 
+          <span style="font-size: 20px;font-family: Roboto-Regular;padding-left: 2px;">& Up</span>
+        </div>
+
+
+      </div>
+
+     
+    </div>
+
+  </div>
+
+  </section>
+
+  </div>
